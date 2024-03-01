@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light"="">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -15,7 +15,89 @@
   </head>
   <body>
     <main>
-        <h1 class="t"></h1>
+        <section id="header" class="container mx-auto p-4">
+          <div id="nav-bar">
+            <div class="navbar bg-base-100">
+              <div class="navbar-start">
+                <div class="dropdown">
+                  <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+                  </div>
+                  <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 text-2xl">
+                    <li><a>Item 1</a></li>
+                    <li><a>Item 3</a></li>
+                  </ul>
+                </div>
+                <a class="btn btn-ghost text-3xl font-bold">Hot gadgets</a>
+              </div>
+              <div class="navbar-center hidden lg:flex">
+                <ul class="menu menu-horizontal px-1 text-2xl font-semibold">
+                  <li><a>Item 1</a></li> 
+                  <li><a>Item 3</a></li>
+                </ul>
+              </div>
+              <div class="navbar-end">
+                <a class="btn text-white bg-blue-700">Sing Up</a>
+              </div>
+            </div>
+          </div>
+          <div id="hero" class="text-center lg:w-2/3 mx-auto my-16">
+            <h1 class="text-5xl lg:text-6xl font-bold">Apple Iphone 13 Pro Max</h1>
+            <p class="font-medium text-xl opacity-90 mt-6">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humou.</p>
+            <button class="btn bg-blue-600 text-white mt-8">Buy Now</button>
+          </div>
+        </section>
+        <section id="phone" class="container mx-auto p-4">
+          <div class="text-center">
+            <h1 class="text-4xl font-semibold">Search Your Phone</h1>
+            <div class="join w-2/3 mx-auto my-10">
+              <input class="input input-bordered join-item w-full text-xl p-6" placeholder="Search your phone"/>
+              <button class=" join-item text-white bg-blue-600 text-xl px-6 hover:bg-blue-800 hover:text-gray-100 duration-200	">Search</button>
+            </div>
+          </div>
+          <div id="phone-card-container" class="grid grid-cols-1 md:grid-cols-2 mx-auto lg:grid-cols-3 gap-6">
+            <div class="card bg-base-100 shadow-xl">
+              <figure><img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
+              <div class="card-body">
+                <h2 class="card-title">Shoes!</h2>
+                <p>If a dog chews shoes whose shoes does he choose?</p>
+                <div class="card-actions justify-end">
+                  <button class="btn btn-primary">Buy Now</button>
+                </div>
+              </div>
+            </div>
+            <div class="card bg-base-100 shadow-xl">
+              <figure><img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
+              <div class="card-body">
+                <h2 class="card-title">Shoes!</h2>
+                <p>If a dog chews shoes whose shoes does he choose?</p>
+                <div class="card-actions justify-end">
+                  <button class="btn btn-primary">Buy Now</button>
+                </div>
+              </div>
+            </div>
+            <div class="card bg-base-100 shadow-xl">
+              <figure><img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
+              <div class="card-body">
+                <h2 class="card-title">Shoes!</h2>
+                <p>If a dog chews shoes whose shoes does he choose?</p>
+                <div class="card-actions justify-end">
+                  <button class="btn btn-primary">Buy Now</button>
+                </div>
+              </div>
+            </div>
+            <div class="card bg-base-100 shadow-xl">
+              <figure><img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
+              <div class="card-body">
+                <h2 class="card-title">Shoes!</h2>
+                <p>If a dog chews shoes whose shoes does he choose?</p>
+                <div class="card-actions justify-end">
+                  <button class="btn btn-primary">Buy Now</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
     </main>
   </body>
 </html>
