@@ -51,16 +51,19 @@
           <div class="text-center">
             <h1 class="text-4xl font-semibold">Search Your Phone</h1>
             <div class="join w-2/3 mx-auto my-10">
-              <input id="search-fild" class="input input-bordered join-item w-full text-xl p-6" placeholder="Search your phone"/>
-              <button onclick="hanledSearch()" class=" join-item text-white bg-blue-600 text-xl px-6 hover:bg-blue-800 hover:text-gray-100 duration-200	">Search</button>
+              <input id="search-fild" class=" border-2 input-bordered join-item w-full text-xl p-4 border-r-0 outline-none" placeholder="Search your phone"/>
+              <button onclick="handleSearch()" class=" join-item text-white bg-blue-600 text-xl px-8 hover:bg-blue-800 hover:text-gray-100 duration-200	">Search</button>
             </div>
           </div>
+          <div id="spinner" class="text-center my-8 hidden">
+            <span class="loading loading-spinner loading-lg text-primary"></span>
+          </div>
           <!-- * card section start here -->
-          <div id="phone-card-container" class="grid grid-cols-1 md:grid-cols-2 mx-auto lg:grid-cols-3 gap-6">
+          <div id="phone-card-container" class="grid grid-cols-1 md:grid-cols-2 mx-auto lg:grid-cols-3 gap-10">
             
           </div>
           <div id="show-all-btn" class="hidden text-center my-6">
-            <button class="btn btn-active btn-accent text-white text-2xl">Show All</button>
+            <button onclick="showAll()" class="btn btn-active btn-accent text-white text-2xl">Show All</button>
           </div>
         </section>
     </main>

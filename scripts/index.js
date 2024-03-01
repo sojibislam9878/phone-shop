@@ -1,29 +1,37 @@
-const loadData = async (search) =>{
+const loadData = async (search , isShowAll) =>{
     const res = await fetch(`https://openapi.programming-hero.com/api/phones?search=${search}`);
 
     const data =await res.json();
     const phones = data.data;
-    displayPhones(phones)
+    displayPhones(phones, isShowAll)
 }
 
-loadData()
+loadData(13)
 
 
-const displayPhones = phones =>{
+const displayPhones = (phones,isShowAll) =>{
     const phoneDiv = document.getElementById("phone-card-container");
     phoneDiv.innerText = "";
     const showAllBtn = document.getElementById("show-all-btn");
-    if (phones.length > 12) {
+    // if (phones.length === 0) {
+    //     alert("input a valid name")
+    // }
+    
+    if (phones.length > 12 && !isShowAll) {
         showAllBtn.classList.remove("hidden")
     }else{
         showAllBtn.classList.add("hidden")
     }
-    phones = phones.slice(0, 12);
+
+    console.log("is show all",isShowAll);
+        if (!isShowAll) {
+            phones = phones.slice(0, 12);
+        }
 
         phones.forEach(phone => {
         console.log(phone);
         const phoneCard = document.createElement("div");
-        phoneCard.classList = `card bg-base-100 shadow-xl`
+        phoneCard.classList = `card bg-base-100 shadow-xl pt-8`
         phoneCard.innerHTML= `
         <figure><img src="${phone.image}" alt="Shoes" /></figure>
         <div class="card-body">
@@ -36,12 +44,26 @@ const displayPhones = phones =>{
         `
         phoneDiv.appendChild(phoneCard)
     });
+    handleSpinner(false)
 }
 
-const hanledSearch = () =>{
-    console.log("I am clicked");
+const handleSearch = (isShowAll) =>{
+    handleSpinner(true)
     const searchFild = document.getElementById("search-fild");
     const searchText = searchFild.value;
     console.log(searchText);
-    loadData(searchText);
+    loadData(searchText , isShowAll);
+}
+
+const handleSpinner = (isloading) =>{
+    const spinner = document.getElementById("spinner");
+    if (isloading) {
+        spinner.classList.remove("hidden")
+    }else{
+        spinner.classList.add("hidden")
+    }
+}
+
+const showAll = () => {
+    handleSearch(true);
 }
